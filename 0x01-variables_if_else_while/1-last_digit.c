@@ -1,35 +1,32 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-/*
-* main- checks if n is 0 or
-* is greater than 5
-* or less than 6 and not 0
+
+/**
+ * main - Entry point
+ *
+ *		print the value of n status:
+ *              greater than, is zero and is not less than 6.
+ *
+ * Return: Always O
 */
 
-/* betty style doc for function main goes there */
 int main(void)
 {
-	int n;
-    int x;
+	int n, x;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-    x = n % 10;
-    printf("Last digit of %d is %d ", n, x);
-	/* your code goes there */
-    if (n > 5)
-    {
-        printf("and is greater than 5\n");
-    }
-    if (x==0)
-    {
-        printf("and is 0\n");
-    }
-    if (x < 6 && x != 0)
-    {
-        printf("and is less than 6 and not 0\n");
-    }
+	x = n % 10;
+
+	if (x > 5)
+		printf("Last digit of %i is %i and is greater than 5\n", n, x);
+	else if (x == 0)
+		printf("Last digit of %i is %i and is 0\n", n, x);
+	else if (x < 6 && x != 0)
+		printf("Last digit of %i is %i and is less than 6 and not 0\n", n, x);
+
 	return (0);
+	
 }
