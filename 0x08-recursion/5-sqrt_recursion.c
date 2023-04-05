@@ -1,5 +1,26 @@
 #include "main.h"
 
+
+/**
+ * helper_func - auxiliary func
+ * @i: int
+ * @y: int
+ * Return: value
+ */
+
+int helper_func(int i, int y)
+{
+	if (i * i == b)
+		return (i);
+	if (i * i > y)
+		return (-1);
+	return(helper_func(i + 1, y)); 
+}
+
+
+
+
+
 /**
  * _sqrt_recursion - return square root
  * @n: number
@@ -8,14 +29,7 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	if (n == 0 || n == 1)
-		return (n);
-	
-	int i = 1;
-
-	while (i * i <= n)
-		i++;
-	return (_sqrt_recursion(n - i + 1) + (i - 1));
+	if (n == 0)
+		return (0);
+	return (helper_func(1, n));
 }
