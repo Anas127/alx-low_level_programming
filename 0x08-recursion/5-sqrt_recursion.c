@@ -12,7 +12,7 @@ int helper_func(int i, int y)
 {
 	if (i * i == y)
 		return (i);
-	if (i * i < y)
+	if (i * i > y)
 		return (-1);
 	return (helper_func(i + 1, y));
 }
