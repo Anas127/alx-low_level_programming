@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strlen - length of str
+ * strlength - length of str
  * @string: param
  * Return: length of string
  */
@@ -17,7 +17,7 @@ int strlength(const char *string)
 	return (l);
 }
 /**
- * *strcpy - copy from src to dest
+ * *strcopy - copy from src to dest
  * @dest: param
  * @src: param
  * Return: ptr
