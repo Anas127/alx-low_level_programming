@@ -14,8 +14,8 @@ void print_all(const char * const format, ...)
 
 	num = 0;
 	va_start(a, format);
-	while ((c = *(format++)))
-	{
+	while ((c = *(format))
+	{	format++;
 		if (num > 0)
 			printf(", ");
 		switch (c)
